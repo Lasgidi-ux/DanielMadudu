@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!-- Primary Meta Tags -->
+    <title>Blog | Daniel Madudu - AI, Tech & Developer Insights</title>
+    <meta name="title" content="Blog | Daniel Madudu - AI, Tech & Developer Insights">
+    <meta name="description"
+        content="Thoughts on AI evolution, developer productivity, and African tech. Hot takes on AI adaptation, deep dives into building with AI, practical developer workflows, and African tech perspectives by Daniel Madudu.">
+    <meta name="keywords"
+        content="AI blog, developer blog, tech blog Nigeria, AI developer insights, ChatGPT developer, Cursor AI, Gemini developer, African tech blog, AI productivity, developer workflow, AI career advice">
+    <meta name="author" content="Daniel Madudu">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://danielmejire.netlify.app/blog.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="blog">
+    <meta property="og:url" content="https://danielmejire.netlify.app/blog.html">
+    <meta property="og:title" content="Daniel Madudu's Blog | AI, Tech & Developer Insights">
+    <meta property="og:description"
+        content="Hot takes on AI adaptation, deep dives into building with AI, practical developer workflows, and African tech perspectives.">
+    <meta property="og:image" content="https://danielmejire.netlify.app/screen.png">
+    <meta property="og:site_name" content="Daniel Madudu Portfolio">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@m_mejire">
+    <meta name="twitter:creator" content="@m_mejire">
+    <meta name="twitter:title" content="Daniel Madudu's Blog | AI, Tech & Developer Insights">
+    <meta name="twitter:description"
+        content="Hot takes on AI adaptation, deep dives into building with AI, and practical developer workflows.">
+    <meta name="twitter:image" content="https://danielmejire.netlify.app/screen.png">
+
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#007fff">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="my%20photo.jpg">
+    <link rel="apple-touch-icon" href="my%20photo.jpg">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- RSS Feed (for future) -->
+    <link rel="alternate" type="application/rss+xml" title="Daniel Madudu's Blog RSS"
+        href="https://danielmejire.netlify.app/rss.xml">
+
+    <!-- Schema.org - Blog -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Daniel Madudu's Blog",
+        "description": "Thoughts on AI evolution, developer productivity, and building the future of African tech",
+        "url": "https://danielmejire.netlify.app/blog.html",
+        "author": {
+            "@type": "Person",
+            "name": "Daniel Madudu",
+            "url": "https://danielmejire.netlify.app"
+        },
+        "blogPost": [
+            {
+                "@type": "BlogPosting",
+                "headline": "AI Won't Replace You. Your Refusal to Adapt Will.",
+                "description": "The uncomfortable truth about AI and employment isn't what you've been told.",
+                "url": "https://danielmejire.netlify.app/blog/ai-wont-replace-you.html",
+                "datePublished": "2026-01-17",
+                "author": {
+                    "@type": "Person",
+                    "name": "Daniel Madudu"
+                },
+                "keywords": ["AI", "career advice", "developer productivity", "AI adaptation"]
+            }
+        ],
+        "inLanguage": "en-US"
+    }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#007fff",
+                        "secondary": "#FF8000",
+                        "titanium": "#8e8e93",
+                        "deep-gray": "#1c1c1e",
+                        "background-light": "#ffffff",
+                        "background-dark": "#1a1a1a",
+                        "border-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "mono": ["monospace"]
+                    },
+                    boxShadow: {
+                        "neo": "6px 6px 0px 0px #000000",
+                        "neo-sm": "4px 4px 0px 0px #000000",
+                        "neo-lg": "8px 8px 0px 0px #000000",
+                    },
+                    borderWidth: {
+                        '3': '3px',
+                        '4': '4px',
+                        '6': '6px',
+                    }
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        .neo-button:active {
+            transform: translate(4px, 4px);
+            box-shadow: 2px 2px 0px 0px #000000;
+        }
+        .neo-card {
+            transition: all 0.2s ease-in-out;
+        }
+        .neo-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 8px 8px 0px 0px #000000;
+        }
+        .dark .neo-card:hover {
+            box-shadow: 8px 8px 0px 0px #ffffff;
+        }
+        .article-card {
+            transition: all 0.2s ease-in-out;
+        }
+        .article-card:hover {
+            transform: translateY(-4px);
+        }
+        .category-tag {
+            transition: all 0.15s ease;
+        }
+        .category-tag:hover {
+            transform: scale(1.05);
+        }
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ffffff;
+            border-left: 3px solid #000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #000;
+            border: 2px solid #fff;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark')
+                localStorage.theme = 'light'
+            } else {
+                document.documentElement.classList.add('dark')
+                localStorage.theme = 'dark'
+            }
+            updateThemeIcon();
+        }
+
+        function updateThemeIcon() {
+            const icon = document.querySelector('#theme-toggle span');
+            if (icon) {
+                icon.textContent = document.documentElement.classList.contains('dark') ? 'light_mode' : 'dark_mode';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+            updateThemeIcon();
+
+            const mobileMenu = document.getElementById('mobile-menu');
+            const openBtn = document.getElementById('open-menu-btn');
+            const closeBtn = document.getElementById('close-menu-btn');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleMenu() {
+                mobileMenu.classList.toggle('translate-x-full');
+            }
+
+            if (openBtn) openBtn.addEventListener('click', toggleMenu);
+            if (closeBtn) closeBtn.addEventListener('click', toggleMenu);
+            mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+        });
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-[#0c141d] dark:text-gray-100 font-display min-h-screen flex flex-col overflow-x-hidden selection:bg-secondary selection:text-white transition-colors duration-300">
+
+    <!-- Header -->
+    <header
+        class="w-full border-b-4 border-black dark:border-white bg-white dark:bg-deep-gray sticky top-0 z-50 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div
+                    class="w-10 h-10 bg-black text-white flex items-center justify-center font-bold text-xl border-2 border-black">
+                    DM
+                </div>
+                <h1 class="text-2xl font-black tracking-tighter uppercase hidden sm:block">Daniel Madudu</h1>
+            </a>
+            <nav class="hidden md:flex items-stretch h-full">
+                <a class="flex items-center px-6 border-l-4 border-black dark:border-white font-bold hover:bg-primary hover:text-white transition-colors h-full text-lg uppercase tracking-tight dark:text-white"
+                    href="index.html">Home</a>
+                <a class="flex items-center px-6 border-l-4 border-black dark:border-white font-bold hover:bg-primary hover:text-white transition-colors h-full text-lg uppercase tracking-tight dark:text-white"
+                    href="index.html#work">Work</a>
+                <a class="flex items-center px-6 border-l-4 border-black dark:border-white font-bold hover:bg-primary hover:text-white transition-colors h-full text-lg uppercase tracking-tight dark:text-white"
+                    href="about.html">About</a>
+                <a class="flex items-center px-6 border-l-4 border-black dark:border-white font-bold bg-primary text-white h-full text-lg uppercase tracking-tight"
+                    href="blog.html">Blog</a>
+                <a class="flex items-center px-6 border-l-4 border-r-4 border-black dark:border-white font-bold hover:bg-primary hover:text-white transition-colors h-full text-lg uppercase tracking-tight dark:text-white"
+                    href="index.html#contact">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle"
+                    class="p-2 border-2 border-black shadow-neo-sm hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all bg-white dark:bg-deep-gray dark:border-white dark:shadow-[4px_4px_0px_0px_#fff]">
+                    <span class="material-symbols-outlined dark:text-white">dark_mode</span>
+                </button>
+                <button id="open-menu-btn"
+                    class="md:hidden p-2 border-2 border-black shadow-neo-sm bg-primary text-white">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-7xl mx-auto px-4 md:px-8 py-12">
+
+        <!-- Blog Hero -->
+        <div class="mb-12">
+            <div class="flex items-center gap-4 mb-6">
+                <span class="material-symbols-outlined text-5xl text-primary">edit_note</span>
+                <div>
+                    <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter">The Blog</h1>
+                    <p class="text-titanium font-mono text-sm">Thoughts on AI, Code & African Tech</p>
+                </div>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="flex flex-wrap gap-3">
+                <button
+                    class="category-tag px-4 py-2 bg-black text-white font-bold uppercase text-sm border-2 border-black shadow-neo-sm">
+                    All Posts
+                </button>
+                <button
+                    class="category-tag px-4 py-2 bg-red-500 text-white font-bold uppercase text-sm border-2 border-black shadow-neo-sm">
+                    🔥 Hot Takes
+                </button>
+                <button
+                    class="category-tag px-4 py-2 bg-primary text-white font-bold uppercase text-sm border-2 border-black shadow-neo-sm">
+                    🔬 Deep Dives
+                </button>
+                <button
+                    class="category-tag px-4 py-2 bg-secondary text-black font-bold uppercase text-sm border-2 border-black shadow-neo-sm">
+                    🛠️ Tools & Workflows
+                </button>
+                <button
+                    class="category-tag px-4 py-2 bg-green-500 text-white font-bold uppercase text-sm border-2 border-black shadow-neo-sm">
+                    🌍 African Tech
+                </button>
+            </div>
+        </div>
+
+        <!-- Featured Post -->
+        <div class="mb-16">
+            <div class="flex items-center gap-4 mb-6">
+                <h2
+                    class="text-2xl font-black uppercase tracking-tight bg-black text-white px-4 py-1 inline-block transform -rotate-1 shadow-[4px_4px_0px_0px_#FF8000]">
+                    Featured
+                </h2>
+                <div class="h-1 bg-black dark:bg-white flex-grow"></div>
+            </div>
+
+            <a href="blog/ai-wont-replace-you.html" class="block">
+                <article
+                    class="neo-card bg-gradient-to-br from-red-500 to-orange-500 border-4 border-black dark:border-white shadow-neo-lg dark:shadow-[8px_8px_0px_0px_#fff] p-8 md:p-12 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span
+                                class="bg-white text-red-500 font-bold px-3 py-1 text-sm border-2 border-black uppercase">🔥
+                                Hot Take</span>
+                            <span class="text-white/80 font-mono text-sm">Jan 17, 2026 • 5 min read</span>
+                        </div>
+                        <h3
+                            class="text-3xl md:text-5xl font-black text-white uppercase tracking-tight mb-4 leading-tight">
+                            AI Won't Replace You.<br />
+                            <span class="text-black">Your Refusal to Adapt Will.</span>
+                        </h3>
+                        <p class="text-white/90 text-lg md:text-xl max-w-2xl mb-6">
+                            The uncomfortable truth about AI and employment isn't what you've been told. It's not about
+                            robots taking jobs—it's about humans refusing to evolve.
+                        </p>
+                        <div
+                            class="flex items-center gap-2 text-white font-bold uppercase group-hover:gap-4 transition-all">
+                            Read Full Article
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </div>
+                    </div>
+                </article>
+            </a>
+        </div>
+
+        <!-- Hot Takes Section -->
+        <section class="mb-16">
+            <div class="flex items-center gap-4 mb-6">
+                <h2 class="text-xl font-black uppercase tracking-tight flex items-center gap-2">
+                    <span class="text-2xl">🔥</span> Hot Takes
+                </h2>
+                <div class="h-0.5 bg-red-500 flex-grow"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Hot Take 1 -->
+                <a href="blog/ai-wont-replace-you.html"
+                    class="article-card block bg-white dark:bg-deep-gray border-4 border-black dark:border-white shadow-neo dark:shadow-[6px_6px_0px_0px_#fff] overflow-hidden">
+                    <div class="bg-red-500 p-4 border-b-4 border-black dark:border-white">
+                        <span class="text-white font-bold uppercase text-sm">🔥 Hot Take</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-black uppercase mb-2 dark:text-white">AI Won't Replace You. Your Refusal
+                            to Adapt Will.</h3>
+                        <p class="text-titanium text-sm mb-4">The uncomfortable truth about AI and employment...</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-mono text-xs text-titanium">Jan 17, 2026</span>
+                            <span class="font-mono text-xs text-titanium">5 min read</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Hot Take 2 -->
+                <a href="#"
+                    class="article-card block bg-white dark:bg-deep-gray border-4 border-black dark:border-white shadow-neo dark:shadow-[6px_6px_0px_0px_#fff] overflow-hidden opacity-60">
+                    <div class="bg-red-500 p-4 border-b-4 border-black dark:border-white">
+                        <span class="text-white font-bold uppercase text-sm">🔥 Hot Take</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-black uppercase mb-2 dark:text-white">Stop Learning Frameworks. Start
+                            Understanding Systems.</h3>
+                        <p class="text-titanium text-sm mb-4">Why chasing the latest tech is killing your career...</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-mono text-xs bg-secondary text-black px-2 py-0.5">COMING SOON</span>
+                            <span class="font-mono text-xs text-titanium">4 min read</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Deep Dives Section -->
+        <section class="mb-16">
+            <div class="flex items-center gap-4 mb-6">
+                <h2 class="text-xl font-black uppercase tracking-tight flex items-center gap-2">
+                    <span class="text-2xl">🔬</span> Deep Dives
+                </h2>
+                <div class="h-0.5 bg-primary flex-grow"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Deep Dive 1 -->
+                <a href="#"
+                    class="article-card block bg-white dark:bg-deep-gray border-4 border-black dark:border-white shadow-neo dark:shadow-[6px_6px_0px_0px_#fff] overflow-hidden opacity-60">
+                    <div class="bg-primary p-4 border-b-4 border-black dark:border-white">
+                        <span class="text-white font-bold uppercase text-sm">🔬 Deep Dive</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-black uppercase mb-2 dark:text-white">Building MemoryMesh: An AI Second
+                            Brain</h3>
+                        <p class="text-titanium text-sm mb-4">Technical breakdown of building a personal knowledge
+                            management system with AI...</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-mono text-xs bg-secondary text-black px-2 py-0.5">COMING SOON</span>
+                            <span class="font-mono text-xs text-titanium">15 min read</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Deep Dive 2 -->
+                <a href="#"
+                    class="article-card block bg-white dark:bg-deep-gray border-4 border-black dark:border-white shadow-neo dark:shadow-[6px_6px_0px_0px_#fff] overflow-hidden opacity-60">
+                    <div class="bg-primary p-4 border-b-4 border-black dark:border-white">
+                        <span class="text-white font-bold uppercase text-sm">🔬 Deep Dive</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-black uppercase mb-2 dark:text-white">Understanding AI: Beyond the Hype
+                            and Fear</h3>
+                        <p class="text-titanium text-sm mb-4">Demystifying artificial intelligence for everyone, not
+                            just developers...</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-mono text-xs bg-secondary text-black px-2 py-0.5">COMING SOON</span>
+                            <span class="font-mono text-xs text-titanium">12 min read</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Tools & Workflows Section -->
+        <section class="mb-16">
+            <div class="flex items-center gap-4 mb-6">
+                <h2 class="text-xl font-black uppercase tracking-tight flex items-center gap-2">
+                    <span class="text-2xl">🛠️</span> Tools & Workflows
+                </h2>
+                <div class="h-0.5 bg-secondary flex-grow"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Tools 1 -->
+                <a href="#"
+                    class="article-card block bg-white dark:bg-deep-gray border-4 border-black dark:border-white shadow-neo dark:shadow-[6px_6px_0px_0px_#fff] overflow-hidden opacity-60">
+                    <div class="bg-secondary p-4 border-b-4 border-black dark:border-white">
+                        <span class="text-black font-bold uppercase text-sm">🛠️ Tools & Workflows</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-black uppercase mb-2 dark:text-white">How I Use Cursor & Gemini to Ship
+                            10x Faster</h3>
+                        <p class="text-titanium text-sm mb-4">My complete AI-assisted development workflow for maximum
+                            velocity...</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-mono text-xs bg-secondary text-black px-2 py-0.5">COMING SOON</span>
+                            <span class="font-mono text-xs text-titanium">8 min read</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Tools 2 -->
+                <a href="#"
+                    class="article-card block bg-white dark:bg-deep-gray border-4 border-black dark:border-white shadow-neo dark:shadow-[6px_6px_0px_0px_#fff] overflow-hidden opacity-60">
+                    <div class="bg-secondary p-4 border-b-4 border-black dark:border-white">
+                        <span class="text-black font-bold uppercase text-sm">🛠️ Tools & Workflows</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-black uppercase mb-2 dark:text-white">My MCP Server Setup for AI Context
+                            Management</h3>
+                        <p class="text-titanium text-sm mb-4">How Model Context Protocol changed my AI development
+                            game...</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-mono text-xs bg-secondary text-black px-2 py-0.5">COMING SOON</span>
+                            <span class="font-mono text-xs text-titanium">10 min read</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- African Tech Section -->
+        <section class="mb-16">
+            <div class="flex items-center gap-4 mb-6">
+                <h2 class="text-xl font-black uppercase tracking-tight flex items-center gap-2">
+                    <span class="text-2xl">🌍</span> African Tech
+                </h2>
+                <div class="h-0.5 bg-green-500 flex-grow"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- African Tech 1 -->
+                <a href="#"
+                    class="article-card block bg-white dark:bg-deep-gray border-4 border-black dark:border-white shadow-neo dark:shadow-[6px_6px_0px_0px_#fff] overflow-hidden opacity-60">
+                    <div class="bg-green-500 p-4 border-b-4 border-black dark:border-white">
+                        <span class="text-white font-bold uppercase text-sm">🌍 African Tech</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-black uppercase mb-2 dark:text-white">Why Africa Needs Its Own AI
+                            Infrastructure</h3>
+                        <p class="text-titanium text-sm mb-4">The case for building localized AI solutions for the
+                            African context...</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-mono text-xs bg-secondary text-black px-2 py-0.5">COMING SOON</span>
+                            <span class="font-mono text-xs text-titanium">7 min read</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- African Tech 2 -->
+                <a href="#"
+                    class="article-card block bg-white dark:bg-deep-gray border-4 border-black dark:border-white shadow-neo dark:shadow-[6px_6px_0px_0px_#fff] overflow-hidden opacity-60">
+                    <div class="bg-green-500 p-4 border-b-4 border-black dark:border-white">
+                        <span class="text-white font-bold uppercase text-sm">🌍 African Tech</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-black uppercase mb-2 dark:text-white">Building FlexiRyde: Luxury
+                            Mobility for Africa</h3>
+                        <p class="text-titanium text-sm mb-4">Creating a premium ride-hailing experience for
+                            sophisticated African commuters...</p>
+                        <div class="flex items-center justify-between">
+                            <span class="font-mono text-xs bg-secondary text-black px-2 py-0.5">COMING SOON</span>
+                            <span class="font-mono text-xs text-titanium">10 min read</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="mb-12" id="newsletter">
+            <div
+                class="bg-black dark:bg-deep-gray border-4 border-black dark:border-white shadow-neo-lg dark:shadow-[8px_8px_0px_0px_#fff] p-8 md:p-12 relative overflow-hidden">
+                <div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+                <div class="relative z-10 max-w-2xl mx-auto text-center">
+                    <span class="material-symbols-outlined text-5xl text-secondary mb-4 block"
+                        id="newsletter-icon">mail</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-white uppercase tracking-tight mb-4"
+                        id="newsletter-title">
+                        Stay in the Loop
+                    </h2>
+                    <p class="text-gray-300 text-lg mb-8" id="newsletter-description">
+                        Get notified when I publish new thoughts on AI, development workflows, and African tech. No
+                        spam, just signal.
+                    </p>
+
+                    <!-- Newsletter Form -->
+                    <form id="newsletter-form" action="https://formspree.io/f/xpqqqror" method="POST"
+                        class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                        <input type="email" name="email" id="newsletter-email" placeholder="your@email.com" required
+                            class="flex-1 px-4 py-3 bg-white border-4 border-black text-black font-bold placeholder:text-titanium focus:outline-none focus:ring-2 focus:ring-primary">
+                        <input type="hidden" name="_subject" value="New Blog Subscriber!">
+                        <input type="hidden" name="_template" value="table">
+                        <button type="submit" id="newsletter-btn"
+                            class="px-6 py-3 bg-secondary text-black font-bold uppercase border-4 border-black shadow-neo-sm hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
+                            <span class="material-symbols-outlined" id="btn-icon">send</span>
+                            <span id="btn-text">Subscribe</span>
+                        </button>
+                    </form>
+
+                    <!-- Success Message (hidden by default) -->
+                    <div id="newsletter-success"
+                        class="hidden mt-6 p-4 bg-green-500/20 border-2 border-green-500 text-green-400">
+                        <span class="material-symbols-outlined text-2xl mb-2 block">check_circle</span>
+                        <p class="font-bold uppercase">You're In!</p>
+                        <p class="text-sm">You'll be notified when new posts go live.</p>
+                    </div>
+
+                    <!-- Error Message (hidden by default) -->
+                    <div id="newsletter-error"
+                        class="hidden mt-6 p-4 bg-red-500/20 border-2 border-red-500 text-red-400">
+                        <span class="material-symbols-outlined text-2xl mb-2 block">error</span>
+                        <p class="font-bold uppercase">Oops! Something went wrong.</p>
+                        <p class="text-sm">Please try again or email me directly.</p>
+                    </div>
+
+                    <p class="text-gray-500 text-xs mt-4 font-mono">No spam. Unsubscribe anytime. Your email is safe.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Script -->
+        <script>
+            document.getElementById('newsletter-form').addEventListener('submit', async function (e) {
+                e.preventDefault();
+
+                const form = this;
+                const btn = document.getElementById('newsletter-btn');
+                const btnIcon = document.getElementById('btn-icon');
+                const btnText = document.getElementById('btn-text');
+                const emailInput = document.getElementById('newsletter-email');
+                const successMsg = document.getElementById('newsletter-success');
+                const errorMsg = document.getElementById('newsletter-error');
+
+                // Validate email
+                const email = emailInput.value.trim();
+                if (!email || !email.includes('@')) {
+                    emailInput.classList.add('ring-2', 'ring-red-500');
+                    return;
+                }
+
+                // Show loading state
+                btn.disabled = true;
+                btnIcon.textContent = 'hourglass_empty';
+                btnIcon.classList.add('animate-spin');
+                btnText.textContent = 'Subscribing...';
+
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        // Success!
+                        form.classList.add('hidden');
+                        successMsg.classList.remove('hidden');
+                        document.getElementById('newsletter-icon').textContent = 'mark_email_read';
+                        document.getElementById('newsletter-title').textContent = 'Subscribed!';
+                        document.getElementById('newsletter-description').textContent = 'Welcome to the inner circle. You\'ll hear from me when something important drops.';
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                } catch (error) {
+                    // Error
+                    errorMsg.classList.remove('hidden');
+                    btn.disabled = false;
+                    btnIcon.textContent = 'send';
+                    btnIcon.classList.remove('animate-spin');
+                    btnText.textContent = 'Try Again';
+                }
+            });
+
+            // Remove error styling on input
+            document.getElementById('newsletter-email').addEventListener('input', function () {
+                this.classList.remove('ring-2', 'ring-red-500');
+                document.getElementById('newsletter-error').classList.add('hidden');
+            });
+        </script>
+
+    </main>
+
+    <!-- Footer -->
+    <footer
+        class="border-t-4 border-black dark:border-white bg-white dark:bg-deep-gray py-12 relative overflow-hidden transition-colors duration-300">
+        <div
+            class="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center gap-8 relative z-10 text-black dark:text-white">
+            <div class="flex flex-col gap-4 max-w-md text-center md:text-left">
+                <h2 class="text-5xl font-black uppercase tracking-tighter">Let's Build</h2>
+                <p class="text-lg font-medium">Ready to create something loud? Drop a line.</p>
+                <a class="text-2xl font-bold underline decoration-4 decoration-primary hover:bg-primary hover:text-white transition-colors inline-block self-center md:self-start p-1"
+                    href="mailto:mejiremadudu@yahoo.com">mejiremadudu@yahoo.com</a>
+            </div>
+            <div class="flex gap-6">
+                <a class="w-12 h-12 flex items-center justify-center border-4 border-black dark:border-white bg-white dark:bg-deep-gray hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-colors shadow-neo-sm dark:shadow-[4px_4px_0px_0px_#fff] dark:text-white"
+                    href="https://x.com/m_mejire" target="_blank" rel="noopener noreferrer">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                        </path>
+                    </svg>
+                </a>
+                <a class="w-12 h-12 flex items-center justify-center border-4 border-black dark:border-white bg-white dark:bg-deep-gray hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-colors shadow-neo-sm dark:shadow-[4px_4px_0px_0px_#fff] dark:text-white"
+                    href="https://www.linkedin.com/in/daniel-m-234369289" target="_blank" rel="noopener noreferrer">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                        </path>
+                    </svg>
+                </a>
+                <a class="w-12 h-12 flex items-center justify-center border-4 border-black dark:border-white bg-white dark:bg-deep-gray hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-colors shadow-neo-sm dark:shadow-[4px_4px_0px_0px_#fff] dark:text-white"
+                    href="https://github.com/Lasgidi-ux" target="_blank" rel="noopener noreferrer">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="absolute -bottom-20 left-0 w-full overflow-hidden pointer-events-none opacity-5 dark:opacity-10">
+            <h1 class="text-[200px] font-black leading-none whitespace-nowrap text-black dark:text-white">DANIEL MADUDU
+            </h1>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-white dark:bg-deep-gray transform translate-x-full transition-transform duration-300 md:hidden flex flex-col">
+        <div class="p-4 flex justify-end border-b-4 border-black dark:border-white">
+            <button id="close-menu-btn"
+                class="p-2 border-2 border-black dark:border-white shadow-neo-sm bg-primary text-white">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="flex-grow flex flex-col items-center justify-center gap-8 text-3xl font-black uppercase">
+            <a href="index.html" class="hover:text-primary dark:text-white transition-colors mobile-link">Home</a>
+            <a href="index.html#work" class="hover:text-primary dark:text-white transition-colors mobile-link">Work</a>
+            <a href="about.html" class="hover:text-primary dark:text-white transition-colors mobile-link">About</a>
+            <a href="blog.html" class="text-primary dark:text-primary transition-colors mobile-link">Blog</a>
+            <a href="index.html#contact"
+                class="hover:text-primary dark:text-white transition-colors mobile-link">Contact</a>
+        </nav>
+    </div>
+</body>
+
+</html>
