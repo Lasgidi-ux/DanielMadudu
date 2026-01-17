@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!-- Primary Meta Tags -->
+    <title>Resume | Daniel Madudu - Full-Stack Developer & AI Engineer</title>
+    <meta name="title" content="Resume | Daniel Madudu - Full-Stack Developer & AI Engineer">
+    <meta name="description"
+        content="Professional resume of Daniel Madudu - Full-Stack Developer, AI Engineer, and Tech Entrepreneur based in Lagos, Nigeria. Expert in React, Next.js, Flutter, and AI integration.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://danielmejire.netlify.app/resume.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://danielmejire.netlify.app/resume.html">
+    <meta property="og:title" content="Resume | Daniel Madudu">
+    <meta property="og:description" content="Full-Stack Developer & AI Engineer based in Lagos, Nigeria.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="my%20photo.jpg">
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#007fff",
+                        "secondary": "#FF8000",
+                        "titanium": "#8e8e93",
+                        "deep-gray": "#1c1c1e",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "mono": ["monospace"]
+                    },
+                    boxShadow: {
+                        "neo": "6px 6px 0px 0px #000000",
+                        "neo-sm": "4px 4px 0px 0px #000000",
+                    },
+                },
+            },
+        }
+    </script>
+
+    <!-- Print Styles -->
+    <style>
+        @media print {
+            body {
+                background: white !important;
+                color: black !important;
+                font-size: 11pt !important;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            .print-break {
+                page-break-before: always;
+            }
+
+            header,
+            footer {
+                display: none !important;
+            }
+
+            .resume-container {
+                max-width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                box-shadow: none !important;
+                border: none !important;
+            }
+
+            a {
+                text-decoration: none !important;
+                color: black !important;
+            }
+
+            .skill-tag {
+                background: #f0f0f0 !important;
+                color: black !important;
+                border: 1px solid #ccc !important;
+            }
+        }
+
+        @page {
+            margin: 0.5in;
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #ffffff;
+            border-left: 3px solid #000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #000;
+            border: 2px solid #fff;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark')
+                localStorage.theme = 'light'
+            } else {
+                document.documentElement.classList.add('dark')
+                localStorage.theme = 'dark'
+            }
+            updateThemeIcon();
+        }
+
+        function updateThemeIcon() {
+            const icon = document.querySelector('#theme-toggle span');
+            if (icon) {
+                icon.textContent = document.documentElement.classList.contains('dark') ? 'light_mode' : 'dark_mode';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
+            updateThemeIcon();
+
+            const mobileMenu = document.getElementById('mobile-menu');
+            const openBtn = document.getElementById('open-menu-btn');
+            const closeBtn = document.getElementById('close-menu-btn');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleMenu() {
+                mobileMenu.classList.toggle('translate-x-full');
+            }
+
+            if (openBtn) openBtn.addEventListener('click', toggleMenu);
+            if (closeBtn) closeBtn.addEventListener('click', toggleMenu);
+            mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+        });
+
+        function printResume() {
+            window.print();
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-[#0a0a0a] text-[#0c141d] dark:text-gray-100 font-display min-h-screen flex flex-col">
+
+    <!-- Header (No Print) -->
+    <header
+        class="no-print w-full border-b-4 border-black dark:border-white bg-white dark:bg-deep-gray sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div
+                    class="w-10 h-10 bg-black text-white flex items-center justify-center font-bold text-xl border-2 border-black">
+                    DM
+                </div>
+                <h1 class="text-2xl font-black tracking-tighter uppercase hidden sm:block">Daniel Madudu</h1>
+            </a>
+            <nav class="hidden md:flex items-stretch h-full">
+                <a class="flex items-center px-6 border-l-4 border-black dark:border-white font-bold hover:bg-primary hover:text-white transition-colors h-full text-lg uppercase tracking-tight dark:text-white"
+                    href="index.html">Home</a>
+                <a class="flex items-center px-6 border-l-4 border-black dark:border-white font-bold hover:bg-primary hover:text-white transition-colors h-full text-lg uppercase tracking-tight dark:text-white"
+                    href="about.html">About</a>
+                <a class="flex items-center px-6 border-l-4 border-black dark:border-white font-bold hover:bg-primary hover:text-white transition-colors h-full text-lg uppercase tracking-tight dark:text-white"
+                    href="blog.html">Blog</a>
+                <a class="flex items-center px-6 border-l-4 border-r-4 border-black dark:border-white font-bold bg-primary text-white h-full text-lg uppercase tracking-tight"
+                    href="resume.html">Resume</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle"
+                    class="p-2 border-2 border-black shadow-neo-sm hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all bg-white dark:bg-deep-gray dark:border-white dark:shadow-[4px_4px_0px_0px_#fff]">
+                    <span class="material-symbols-outlined dark:text-white">dark_mode</span>
+                </button>
+                <button id="open-menu-btn"
+                    class="md:hidden p-2 border-2 border-black shadow-neo-sm bg-primary text-white">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-4 md:px-8 py-8">
+
+        <!-- Action Buttons (No Print) -->
+        <div class="no-print flex flex-wrap gap-4 mb-8">
+            <button onclick="printResume()"
+                class="px-6 py-3 bg-black dark:bg-white text-white dark:text-black font-bold uppercase border-4 border-black dark:border-white shadow-neo dark:shadow-[6px_6px_0px_0px_#fff] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] transition-all flex items-center gap-2">
+                <span class="material-symbols-outlined">print</span>
+                Print / Save PDF
+            </button>
+            <a href="mailto:mejiremadudu@yahoo.com"
+                class="px-6 py-3 bg-primary text-white font-bold uppercase border-4 border-black shadow-neo hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] transition-all flex items-center gap-2">
+                <span class="material-symbols-outlined">mail</span>
+                Contact Me
+            </a>
+        </div>
+
+        <!-- Resume Container -->
+        <div
+            class="resume-container bg-white dark:bg-deep-gray border-4 border-black dark:border-white shadow-neo-lg dark:shadow-[8px_8px_0px_0px_#fff] p-6 md:p-10">
+
+            <!-- Header Section -->
+            <header class="border-b-4 border-black dark:border-white pb-6 mb-6">
+                <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-black uppercase tracking-tight leading-none">Daniel Madudu
+                        </h1>
+                        <p class="text-xl md:text-2xl font-bold text-primary mt-1">Full-Stack Developer & AI Engineer
+                        </p>
+                        <p class="text-titanium font-mono text-sm mt-2">Tech Entrepreneur | Building the OS for African
+                            Mobility</p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="my%20photo.jpg" alt="Daniel Madudu"
+                            class="w-24 h-24 md:w-28 md:h-28 object-cover border-4 border-black dark:border-white">
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="flex flex-wrap gap-4 md:gap-6 mt-6 text-sm font-mono">
+                    <a href="mailto:mejiremadudu@yahoo.com"
+                        class="flex items-center gap-1 hover:text-primary transition-colors">
+                        <span class="material-symbols-outlined text-base">mail</span>
+                        mejiremadudu@yahoo.com
+                    </a>
+                    <span class="flex items-center gap-1">
+                        <span class="material-symbols-outlined text-base">location_on</span>
+                        Lagos, Nigeria
+                    </span>
+                    <a href="https://danielmejire.netlify.app" target="_blank"
+                        class="flex items-center gap-1 hover:text-primary transition-colors">
+                        <span class="material-symbols-outlined text-base">language</span>
+                        danielmejire.netlify.app
+                    </a>
+                    <a href="https://github.com/Lasgidi-ux" target="_blank"
+                        class="flex items-center gap-1 hover:text-primary transition-colors">
+                        <span class="material-symbols-outlined text-base">code</span>
+                        GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/daniel-m-234369289" target="_blank"
+                        class="flex items-center gap-1 hover:text-primary transition-colors">
+                        <span class="material-symbols-outlined text-base">person</span>
+                        LinkedIn
+                    </a>
+                </div>
+            </header>
+
+            <!-- Professional Summary -->
+            <section class="mb-8">
+                <h2 class="text-xl font-black uppercase tracking-tight mb-3 flex items-center gap-2">
+                    <span class="w-8 h-1 bg-primary"></span>
+                    Professional Summary
+                </h2>
+                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    Results-driven <strong>Full-Stack Developer</strong> and <strong>AI Engineer</strong> with expertise
+                    in building scalable web and mobile applications. Passionate about leveraging artificial
+                    intelligence to create innovative solutions for real-world problems. Currently focused on developing
+                    luxury mobility solutions for the African market through <strong>FlexiRyde</strong> and AI-powered
+                    knowledge management systems with <strong>MemoryMesh</strong>. Strong advocate for security-first
+                    development practices and performance-optimized architectures.
+                </p>
+            </section>
+
+            <!-- Technical Skills -->
+            <section class="mb-8">
+                <h2 class="text-xl font-black uppercase tracking-tight mb-4 flex items-center gap-2">
+                    <span class="w-8 h-1 bg-secondary"></span>
+                    Technical Skills
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="font-bold uppercase text-sm mb-2 text-titanium">Frontend Development</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">React</span>
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">Next.js</span>
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">TypeScript</span>
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">Tailwind
+                                CSS</span>
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">JavaScript
+                                (ES6+)</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold uppercase text-sm mb-2 text-titanium">Backend & Database</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">Node.js</span>
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">Python</span>
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">Firebase</span>
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">Supabase</span>
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">PostgreSQL</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold uppercase text-sm mb-2 text-titanium">Mobile Development</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">Flutter</span>
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">Dart</span>
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">Cross-Platform
+                                Apps</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold uppercase text-sm mb-2 text-titanium">AI & ML Integration</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">Gemini
+                                API</span>
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">OpenAI
+                                API</span>
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">MCP</span>
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">Prompt
+                                Engineering</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold uppercase text-sm mb-2 text-titanium">DevOps & Tools</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">Docker</span>
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">Git/GitHub</span>
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">CI/CD</span>
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">Netlify</span>
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">Vercel</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold uppercase text-sm mb-2 text-titanium">Security</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">OWASP
+                                Top 10</span>
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">RBAC</span>
+                            <span
+                                class="skill-tag px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs font-bold">Row-Level
+                                Security</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects / Experience -->
+            <section class="mb-8">
+                <h2 class="text-xl font-black uppercase tracking-tight mb-4 flex items-center gap-2">
+                    <span class="w-8 h-1 bg-primary"></span>
+                    Featured Projects
+                </h2>
+
+                <!-- FlexiRyde -->
+                <div class="mb-6 border-l-4 border-secondary pl-4">
+                    <div class="flex flex-col md:flex-row md:items-baseline md:justify-between">
+                        <h3 class="text-lg font-black uppercase">FlexiRyde</h3>
+                        <span class="text-titanium font-mono text-sm">2024 - Present</span>
+                    </div>
+                    <p class="text-primary font-bold text-sm mb-2">Founder & Lead Developer | Luxury Mobility
+                        Marketplace</p>
+                    <ul class="list-disc list-outside ml-4 text-gray-700 dark:text-gray-300 text-sm space-y-1">
+                        <li>Architected and developed a dual-app ecosystem (Customer & Partner) using
+                            <strong>Flutter</strong> and <strong>Dart</strong></li>
+                        <li>Implemented real-time booking system with <strong>Firebase</strong> for instant ride
+                            matching</li>
+                        <li>Designed AI-ready architecture for future intelligent pricing and route optimization</li>
+                        <li>Built premium vehicle fleet management system with chauffeur verification</li>
+                        <li>Created responsive marketing website at <strong>flexiryde.com</strong></li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        <span class="text-xs font-mono text-titanium">Flutter</span>
+                        <span class="text-xs font-mono text-titanium">•</span>
+                        <span class="text-xs font-mono text-titanium">Dart</span>
+                        <span class="text-xs font-mono text-titanium">•</span>
+                        <span class="text-xs font-mono text-titanium">Firebase</span>
+                        <span class="text-xs font-mono text-titanium">•</span>
+                        <span class="text-xs font-mono text-titanium">Google Maps API</span>
+                    </div>
+                </div>
+
+                <!-- MemoryMesh -->
+                <div class="mb-6 border-l-4 border-purple-500 pl-4">
+                    <div class="flex flex-col md:flex-row md:items-baseline md:justify-between">
+                        <h3 class="text-lg font-black uppercase">MemoryMesh</h3>
+                        <span class="text-titanium font-mono text-sm">2024 - Present</span>
+                    </div>
+                    <p class="text-primary font-bold text-sm mb-2">Creator & Developer | AI-Powered Knowledge Management
+                    </p>
+                    <ul class="list-disc list-outside ml-4 text-gray-700 dark:text-gray-300 text-sm space-y-1">
+                        <li>Built an AI-powered "second brain" application using <strong>React</strong> and
+                            <strong>TypeScript</strong></li>
+                        <li>Implemented neural network visualization for connecting thoughts and ideas</li>
+                        <li>Integrated <strong>AI/ML</strong> for automatic relationship discovery between memories</li>
+                        <li>Deployed real-time sync with <strong>Firebase Firestore</strong> for cross-device access
+                        </li>
+                        <li>Achieved <strong>Beta v0.9</strong> release with active user testing</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        <span class="text-xs font-mono text-titanium">React</span>
+                        <span class="text-xs font-mono text-titanium">•</span>
+                        <span class="text-xs font-mono text-titanium">TypeScript</span>
+                        <span class="text-xs font-mono text-titanium">•</span>
+                        <span class="text-xs font-mono text-titanium">Firebase</span>
+                        <span class="text-xs font-mono text-titanium">•</span>
+                        <span class="text-xs font-mono text-titanium">Zustand</span>
+                        <span class="text-xs font-mono text-titanium">•</span>
+                        <span class="text-xs font-mono text-titanium">AI/ML</span>
+                    </div>
+                </div>
+
+                <!-- Nexalph Academy -->
+                <div class="mb-6 border-l-4 border-primary pl-4">
+                    <div class="flex flex-col md:flex-row md:items-baseline md:justify-between">
+                        <h3 class="text-lg font-black uppercase">Nexalph Academy</h3>
+                        <span class="text-titanium font-mono text-sm">2023 - 2024</span>
+                    </div>
+                    <p class="text-primary font-bold text-sm mb-2">Technical Lead | EdTech Platform</p>
+                    <ul class="list-disc list-outside ml-4 text-gray-700 dark:text-gray-300 text-sm space-y-1">
+                        <li>Designed and developed a next-gen tech education platform architecture</li>
+                        <li>Built comprehensive LMS dashboard with progress tracking and analytics</li>
+                        <li>Implemented high-performance engineering curricula delivery system</li>
+                        <li>Created responsive, accessible UI following modern design principles</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        <span class="text-xs font-mono text-titanium">React</span>
+                        <span class="text-xs font-mono text-titanium">•</span>
+                        <span class="text-xs font-mono text-titanium">Next.js</span>
+                        <span class="text-xs font-mono text-titanium">•</span>
+                        <span class="text-xs font-mono text-titanium">Node.js</span>
+                        <span class="text-xs font-mono text-titanium">•</span>
+                        <span class="text-xs font-mono text-titanium">PostgreSQL</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Core Competencies -->
+            <section class="mb-8">
+                <h2 class="text-xl font-black uppercase tracking-tight mb-4 flex items-center gap-2">
+                    <span class="w-8 h-1 bg-secondary"></span>
+                    Core Competencies
+                </h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                        <span>Full-Stack Architecture</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                        <span>AI Integration</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                        <span>Security-First Design</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                        <span>Performance Optimization</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                        <span>API Design & Integration</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                        <span>Agile Development</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                        <span>Technical Leadership</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                        <span>Product Development</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education & Certifications -->
+            <section class="mb-8">
+                <h2 class="text-xl font-black uppercase tracking-tight mb-4 flex items-center gap-2">
+                    <span class="w-8 h-1 bg-primary"></span>
+                    Education & Learning
+                </h2>
+                <div class="border-l-4 border-titanium pl-4">
+                    <h3 class="text-lg font-black uppercase">Self-Taught Developer</h3>
+                    <p class="text-titanium text-sm mb-2">Continuous Learning | 2020 - Present</p>
+                    <ul class="list-disc list-outside ml-4 text-gray-700 dark:text-gray-300 text-sm space-y-1">
+                        <li>Completed extensive coursework in full-stack web development, mobile development, and AI/ML
+                            integration</li>
+                        <li>Active contributor to open-source projects and developer communities</li>
+                        <li>Continuously learning and adapting to emerging technologies and best practices</li>
+                        <li>Proficient in AI-assisted development workflows (Cursor, Gemini, GitHub Copilot)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Languages -->
+            <section>
+                <h2 class="text-xl font-black uppercase tracking-tight mb-3 flex items-center gap-2">
+                    <span class="w-8 h-1 bg-secondary"></span>
+                    Languages
+                </h2>
+                <div class="flex gap-6 text-sm">
+                    <span><strong>English:</strong> Fluent</span>
+                    <span><strong>Yoruba:</strong> Native</span>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Footer Note (No Print) -->
+        <div class="no-print text-center mt-8 text-titanium text-sm font-mono">
+            <p>References available upon request</p>
+            <p class="mt-2">Last updated: January 2026</p>
+        </div>
+
+    </main>
+
+    <!-- Mobile Menu (No Print) -->
+    <div id="mobile-menu"
+        class="no-print fixed inset-0 z-[60] bg-white dark:bg-deep-gray transform translate-x-full transition-transform duration-300 md:hidden flex flex-col">
+        <div class="p-4 flex justify-end border-b-4 border-black dark:border-white">
+            <button id="close-menu-btn"
+                class="p-2 border-2 border-black dark:border-white shadow-neo-sm bg-primary text-white">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="flex-grow flex flex-col items-center justify-center gap-8 text-3xl font-black uppercase">
+            <a href="index.html" class="hover:text-primary dark:text-white transition-colors mobile-link">Home</a>
+            <a href="about.html" class="hover:text-primary dark:text-white transition-colors mobile-link">About</a>
+            <a href="blog.html" class="hover:text-primary dark:text-white transition-colors mobile-link">Blog</a>
+            <a href="resume.html" class="text-primary dark:text-primary transition-colors mobile-link">Resume</a>
+        </nav>
+    </div>
+</body>
+
+</html>
