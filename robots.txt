@@ -1,12 +1,12 @@
 # robots.txt for Daniel Madudu Portfolio
-# https://danielmejire.netlify.app
+# https://danielmadudu.onrender.com
 
 # Allow all search engines to crawl all content
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://danielmejire.netlify.app/sitemap.xml
+Sitemap: https://danielmadudu.onrender.com/sitemap.xml
 
 # Crawl delay (optional - be nice to servers)
 Crawl-delay: 1
