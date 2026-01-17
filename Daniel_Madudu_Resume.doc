@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Daniel Madudu - Resume</title>
+<!--[if gte mso 9]>
+<xml>
+<w:WordDocument>
+<w:View>Print</w:View>
+<w:Zoom>100</w:Zoom>
+<w:DoNotOptimizeForBrowser/>
+</w:WordDocument>
+</xml>
+<![endif]-->
+<style>
+@page {
+    size: A4;
+    margin: 0.5in 0.75in;
+}
+body {
+    font-family: 'Calibri', 'Arial', sans-serif;
+    font-size: 11pt;
+    line-height: 1.4;
+    color: #333;
+    max-width: 8.5in;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 24pt;
+    font-weight: bold;
+    margin: 0 0 5pt 0;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: -0.5pt;
+}
+h2 {
+    font-size: 12pt;
+    font-weight: bold;
+    margin: 18pt 0 8pt 0;
+    color: #007fff;
+    text-transform: uppercase;
+    border-bottom: 2pt solid #007fff;
+    padding-bottom: 3pt;
+}
+h3 {
+    font-size: 11pt;
+    font-weight: bold;
+    margin: 10pt 0 2pt 0;
+    color: #000;
+}
+.subtitle {
+    font-size: 14pt;
+    color: #007fff;
+    font-weight: bold;
+    margin-bottom: 3pt;
+}
+.tagline {
+    font-size: 10pt;
+    color: #666;
+    margin-bottom: 12pt;
+}
+.contact-info {
+    font-size: 10pt;
+    color: #333;
+    margin-bottom: 15pt;
+}
+.contact-info span {
+    margin-right: 15pt;
+}
+.section {
+    margin-bottom: 12pt;
+}
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2pt;
+}
+.project-title {
+    font-weight: bold;
+    font-size: 11pt;
+}
+.project-date {
+    font-size: 10pt;
+    color: #666;
+}
+.project-role {
+    font-size: 10pt;
+    color: #007fff;
+    font-weight: bold;
+    margin-bottom: 4pt;
+}
+ul {
+    margin: 4pt 0 8pt 18pt;
+    padding: 0;
+}
+li {
+    margin-bottom: 2pt;
+}
+.skills-grid {
+    display: table;
+    width: 100%;
+}
+.skills-row {
+    display: table-row;
+}
+.skills-label {
+    display: table-cell;
+    width: 25%;
+    font-weight: bold;
+    font-size: 10pt;
+    padding: 3pt 0;
+    vertical-align: top;
+    color: #666;
+}
+.skills-value {
+    display: table-cell;
+    font-size: 10pt;
+    padding: 3pt 0;
+    vertical-align: top;
+}
+.competencies {
+    columns: 2;
+    column-gap: 20pt;
+}
+.competency-item {
+    font-size: 10pt;
+    margin-bottom: 3pt;
+}
+.languages {
+    font-size: 10pt;
+}
+</style>
+</head>
+<body>
+
+<h1>Daniel Madudu</h1>
+<div class="subtitle">Full-Stack Developer & AI Engineer</div>
+<div class="tagline">Tech Entrepreneur | Building the OS for African Mobility</div>
+
+<div class="contact-info">
+    <span>📧 mejiremadudu@yahoo.com</span>
+    <span>📍 Lagos, Nigeria</span>
+    <span>🌐 danielmadudu.onrender.com</span>
+    <span>💼 linkedin.com/in/daniel-m-234369289</span>
+    <span>💻 github.com/Lasgidi-ux</span>
+</div>
+
+<h2>Professional Summary</h2>
+<div class="section">
+    <p>Results-driven <strong>Full-Stack Developer</strong> and <strong>AI Engineer</strong> with expertise in building scalable web and mobile applications. Passionate about leveraging artificial intelligence to create innovative solutions for real-world problems. Currently focused on developing luxury mobility solutions for the African market through <strong>FlexiRyde</strong> and AI-powered knowledge management systems with <strong>MemoryMesh</strong>. Strong advocate for security-first development practices and performance-optimized architectures.</p>
+</div>
+
+<h2>Technical Skills</h2>
+<div class="section">
+    <div class="skills-grid">
+        <div class="skills-row">
+            <div class="skills-label">Frontend:</div>
+            <div class="skills-value">React, Next.js, TypeScript, Tailwind CSS, JavaScript (ES6+)</div>
+        </div>
+        <div class="skills-row">
+            <div class="skills-label">Backend & Database:</div>
+            <div class="skills-value">Node.js, Python, Firebase, Supabase, PostgreSQL</div>
+        </div>
+        <div class="skills-row">
+            <div class="skills-label">Mobile:</div>
+            <div class="skills-value">Flutter, Dart, Cross-Platform Development</div>
+        </div>
+        <div class="skills-row">
+            <div class="skills-label">AI & ML:</div>
+            <div class="skills-value">Gemini API, OpenAI API, MCP, Prompt Engineering</div>
+        </div>
+        <div class="skills-row">
+            <div class="skills-label">DevOps & Tools:</div>
+            <div class="skills-value">Docker, Git/GitHub, CI/CD, Netlify, Vercel, Render</div>
+        </div>
+        <div class="skills-row">
+            <div class="skills-label">Security:</div>
+            <div class="skills-value">OWASP Top 10, RBAC, Row-Level Security</div>
+        </div>
+    </div>
+</div>
+
+<h2>Featured Projects</h2>
+
+<div class="section">
+    <div class="project-header">
+        <span class="project-title">FlexiRyde</span>
+        <span class="project-date">2025 - Present</span>
+    </div>
+    <div class="project-role">Co-Founder | Luxury Mobility Marketplace</div>
+    <ul>
+        <li>Architected and developed a dual-app ecosystem (Customer & Partner) using <strong>Flutter</strong> and <strong>Dart</strong></li>
+        <li>Implemented real-time booking system with <strong>Firebase</strong> for instant ride matching</li>
+        <li>Designed AI-ready architecture for future intelligent pricing and route optimization</li>
+        <li>Built premium vehicle fleet management system with chauffeur verification</li>
+        <li>Created responsive marketing website at <strong>flexiryde.com</strong></li>
+    </ul>
+    <div style="font-size: 9pt; color: #666;">Tech Stack: Flutter • Dart • Firebase • Google Maps API</div>
+</div>
+
+<div class="section">
+    <div class="project-header">
+        <span class="project-title">MemoryMesh</span>
+        <span class="project-date">2024 - Present</span>
+    </div>
+    <div class="project-role">Creator & Developer | AI-Powered Knowledge Management</div>
+    <ul>
+        <li>Built an AI-powered "second brain" application using <strong>React</strong> and <strong>TypeScript</strong></li>
+        <li>Implemented neural network visualization for connecting thoughts and ideas</li>
+        <li>Integrated <strong>AI/ML</strong> for automatic relationship discovery between memories</li>
+        <li>Deployed real-time sync with <strong>Firebase Firestore</strong> for cross-device access</li>
+        <li>Achieved <strong>Beta v0.9</strong> release with active user testing</li>
+    </ul>
+    <div style="font-size: 9pt; color: #666;">Tech Stack: React • TypeScript • Firebase • Zustand • AI/ML</div>
+</div>
+
+<div class="section">
+    <div class="project-header">
+        <span class="project-title">Nexalph Academy</span>
+        <span class="project-date">Present</span>
+    </div>
+    <div class="project-role">Technical Lead | EdTech Platform</div>
+    <ul>
+        <li>Designed and developed a next-gen tech education platform architecture</li>
+        <li>Built comprehensive LMS dashboard with progress tracking and analytics</li>
+        <li>Implemented high-performance engineering curricula delivery system</li>
+        <li>Created responsive, accessible UI following modern design principles</li>
+    </ul>
+    <div style="font-size: 9pt; color: #666;">Tech Stack: React • Next.js • Node.js • PostgreSQL</div>
+</div>
+
+<h2>Core Competencies</h2>
+<div class="section competencies">
+    <div class="competency-item">✓ Full-Stack Architecture</div>
+    <div class="competency-item">✓ AI Integration</div>
+    <div class="competency-item">✓ Security-First Design</div>
+    <div class="competency-item">✓ Performance Optimization</div>
+    <div class="competency-item">✓ API Design & Integration</div>
+    <div class="competency-item">✓ Agile Development</div>
+    <div class="competency-item">✓ Technical Leadership</div>
+    <div class="competency-item">✓ Product Development</div>
+</div>
+
+<h2>Education & Learning</h2>
+<div class="section">
+    <div class="project-header">
+        <span class="project-title">Self-Taught Developer</span>
+        <span class="project-date">2020 - Present</span>
+    </div>
+    <div class="project-role">Continuous Learning</div>
+    <ul>
+        <li>Completed extensive coursework in full-stack web development, mobile development, and AI/ML integration</li>
+        <li>Active contributor to open-source projects and developer communities</li>
+        <li>Continuously learning and adapting to emerging technologies and best practices</li>
+        <li>Proficient in AI-assisted development workflows (Cursor, Gemini, GitHub Copilot)</li>
+    </ul>
+</div>
+
+<h2>Languages</h2>
+<div class="section languages">
+    <strong>English:</strong> Fluent &nbsp;&nbsp;&nbsp;
+    <strong>Yoruba:</strong> Intermediate &nbsp;&nbsp;&nbsp;
+    <strong>Igbo:</strong> Native
+</div>
+
+<div style="text-align: center; margin-top: 20pt; font-size: 9pt; color: #999;">
+    References available upon request
+</div>
+
+</body>
+</html>
