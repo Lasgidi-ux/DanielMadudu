@@ -135,7 +135,7 @@ li {
 <body>
 
 <h1>Daniel Madudu</h1>
-<div class="subtitle">Full-Stack Developer & AI Engineer</div>
+<div class="subtitle">Full-Stack Developer, Mobile Engineer & AI Engineer</div>
 <div class="tagline">Tech Entrepreneur | Building the OS for African Mobility</div>
 
 <div class="contact-info">
@@ -148,7 +148,7 @@ li {
 
 <h2>Professional Summary</h2>
 <div class="section">
-    <p>Results-driven <strong>Full-Stack Developer</strong> and <strong>AI Engineer</strong> with expertise in building scalable web and mobile applications. Passionate about leveraging artificial intelligence to create innovative solutions for real-world problems. Currently focused on developing luxury mobility solutions for the African market through <strong>FlexiRyde</strong> and AI-powered knowledge management systems with <strong>MemoryMesh</strong>. Strong advocate for security-first development practices and performance-optimized architectures.</p>
+    <p>Results-driven <strong>Full-Stack Developer</strong> and <strong>AI Engineer</strong> with 3+ years of professional experience, having developed 5+ production applications serving 1000+ users. Expertise in building scalable web and mobile applications with a focus on performance and security. Passionate about leveraging artificial intelligence to create innovative solutions for real-world problems. Currently focused on developing luxury mobility solutions for the African market through <strong>FlexiRyde</strong> and AI-powered knowledge management systems with <strong>MemoryMesh</strong>. Strong advocate for security-first development practices and performance-optimized architectures.</p>
 </div>
 
 <h2>Technical Skills</h2>
@@ -243,6 +243,18 @@ li {
 </div>
 
 <h2>Education & Learning</h2>
+<div class="section">
+    <div class="project-header">
+        <span class="project-title">BSc Computer Science</span>
+        <span class="project-date">2020 - 2024</span>
+    </div>
+    <div class="project-role">National Open University of Nigeria (NOUN)</div>
+    <ul>
+        <li>Completed Bachelor's degree in Computer Science with focus on software development and systems analysis</li>
+        <li>Gained comprehensive knowledge in programming, algorithms, data structures, and software engineering principles</li>
+    </ul>
+</div>
+
 <div class="section">
     <div class="project-header">
         <span class="project-title">Self-Taught Developer</span>
